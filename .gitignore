@@ -1,6 +1,15 @@
 # Logs
 logs
+
 *.log
+*.bak
+*.js.bak
+*.7z
+*.zip
+
+#Editor 
+.vscode
+.idea
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -37,7 +46,7 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
+build
 # Dependency directories
 node_modules/
 jspm_packages/

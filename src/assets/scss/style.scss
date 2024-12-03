@@ -1,0 +1,278 @@
+// color variants
+@import 'themes-vars.module.scss';
+
+// third-party
+@import '~react-perfect-scrollbar/dist/css/styles.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+// ===========================|| LIGHT BOX ||=========================== //
+.slick-arrow:before {
+    color: $grey500;
+}
+
+// ===========================|| LIGHT BOX ||=========================== //
+.fullscreen .react-images__blanket {
+    z-index: 1200;
+}
+
+// ===========================|| APEXCHART ||=========================== //
+
+.apexcharts-legend-series .apexcharts-legend-marker {
+    margin-right: 8px;
+}
+
+// ===========================|| PERFECT SCROLLBAR ||=========================== //
+
+.scrollbar-container {
+    .ps__rail-y {
+        &:hover > .ps__thumb-y,
+        &:focus > .ps__thumb-y,
+        &.ps--clicking .ps__thumb-y {
+            background-color: $grey500;
+            width: 5px;
+        }
+    }
+    .ps__thumb-y {
+        background-color: $grey500;
+        border-radius: 6px;
+        width: 5px;
+        right: 0;
+    }
+}
+
+.scrollbar-container.ps,
+.scrollbar-container > .ps {
+    &.ps--active-y > .ps__rail-y {
+        width: 5px;
+        background-color: transparent !important;
+        z-index: 999;
+        &:hover,
+        &.ps--clicking {
+            width: 5px;
+            background-color: transparent;
+        }
+    }
+    &.ps--scrolling-y > .ps__rail-y,
+    &.ps--scrolling-x > .ps__rail-x {
+        opacity: 0.4;
+        background-color: transparent;
+    }
+}
+
+// ===========================|| ANIMATION KEYFRAMES ||=========================== //
+
+@keyframes wings {
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -5px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -7px, 0);
+    }
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes slideY {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slideX {
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+// button number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+// input[type='number'] {
+//     -moz-appearance: textfield;
+// }
+.heading {
+    margin-bottom: 25px;
+    // text-decoration: underline
+}
+
+.MuiCardContent-root {
+    padding: 8px !important;
+}
+.MuiCardHeader-root {
+    padding: 8px;
+}
+.MuiTableCell-root {
+    padding: 8px;
+    text-align: center;
+    .MuiButtonBase-root {
+        padding: 0 8px;
+    }
+    p {
+        margin: 0;
+    }
+}
+.MuiToolbar-root {
+    padding: 8px;
+}
+
+.pagination-bar {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.MuiTablePagination-actions {
+    display: none;
+}
+
+.MuiTablePagination-displayedRows {
+    display: none;
+}
+
+.css-1k3yghe-MuiInputBase-root-MuiTablePagination-select {
+    margin: 0;
+}
+
+.MuiTableSortLabel-icon {
+    display: none;
+}
+
+.dashboard-builder {
+    .dashboard-item {
+        .dashboard-item-card {
+            border: 1px solid transparent;
+            &.dashboard-item-active {
+                border: 1px solid #4a81e2;
+            }
+            .card-header {
+                border-radius: 5px 5px 0 0;
+            }
+        }
+        &:hover {
+            z-index: 1;
+            cursor: pointer;
+            user-select: none;
+            .dashboard-item-card {
+                border: 0.3px solid #4a81e2;
+            }
+            .dashboard-item-toolbar {
+                display: block;
+                .toolbar-item {
+                    background-color: #353e48;
+                }
+            }
+        }
+
+        &.dashboard-item-active {
+            z-index: 1;
+            .dashboard-item-card {
+                border: 1px solid #4a81e2;
+            }
+            .dashboard-item-toolbar {
+                display: block;
+                .toolbar-item {
+                    background-color: #4a81e2;
+                }
+            }
+        }
+        .dashboard-item-toolbar {
+            position: absolute;
+            top: -43px;
+            left: -4px;
+            display: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 5px;
+            svg {
+                height: 20px;
+            }
+            .MyDragHandleClassName {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .toolbar-item {
+                display: flex;
+                border-radius: 5px;
+                .dashboard-item-drag {
+                    padding: 3px;
+                    padding-right: 8px;
+                    border-right: 0.5px solid #ccc;
+                    cursor: move;
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+                .dashboard-item-action-tools {
+                    padding: 3px;
+                    svg {
+                        margin: 0 1px;
+                        margin-top: 4px;
+                    }
+                }
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.MuiCardHeader-content {
+    .MuiTypography-h3 {
+        font-size: 1rem;
+    }
+}
